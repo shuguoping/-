@@ -1,0 +1,392 @@
+.fd-page-index{
+
+}
+/************** 通用样式 ********************/
+.fd-content-box{
+  width: 1140px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}
+
+.clearfix {
+  *+height: 1%;
+}
+/************* 顶部栏 ***************/
+.fd-top{
+  height: 55px;
+  border-bottom:1px solid #dedede; 
+}
+.fd-top .fd-phone{
+  position: relative;
+  top: 20px;
+  padding-left:30px;
+  background: url(../img/icon-phone.png) no-repeat left center;
+}
+.fd-top .fd-mail{
+  top: 20px;
+  position: relative;
+    padding-left:30px;
+    background: url(../img/icon-mail.png) no-repeat left center;
+}
+.fd-top i{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 20px;
+}
+.fd-top .fd-icons{
+  float:right;
+}
+.fd-top .fd-icon-facebook{
+  background: url(../img/icon-facebook.png) no-repeat center;
+}
+.fd-top .fd-icon-twitter{
+  background: url(../img/icon-twitter.png) no-repeat center;
+}
+/************* 导航栏 ***************/
+.fd-nav{
+  height: 100px;
+  border-bottom: 1px solid #dedede;
+}
+.fd-nav h1{
+  background: url(../img/logo.png) no-repeat;
+  width:160px;
+  height: 60px;
+  float: left;
+}
+.fd-nav ul {
+  float: right;
+}
+.fd-nav ul li{
+  display: inline-block;
+  width: 118px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.fd-nav ul li a{
+      color: rgb(51, 51, 51);
+      font-size: 16px;
+      cursor: pointer;
+}
+.fd-nav ul li a.active {
+  border-bottom: 2px solid #FDC601;
+}
+.fd-nav>div>div>a {
+  display: inline-block;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  color: #fff;
+  padding: 0 10px;
+}
+.fd-nav>div>div>a.fd-btn-login {
+  background-color: #FDC601;
+}
+.fd-nav>div>div>a.fd-btn-submit {
+background-color: #C2C2C2;
+}
+.fd-nav > div >div{
+  float: right;
+}
+.fd-nav > div{
+  padding-top: 24px;
+}
+/************* 轮播区 ***************/
+.fd-banner{
+  height: 628px;
+  position: relative;
+  text-align:center;
+}
+.fd-banner .fd-slider{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 628px;
+  background: url(../img/pic-1.jpg) no-repeat;
+}
+.fd-banner h2{
+  position: relative;
+  z-index: 1;
+  text-align:center;
+  color: rgba(255, 165, 0, 0.71);
+  font-size: 40px;
+      padding-top: 115px;
+      padding-bottom: 30px;
+}
+.fd-banner p {
+    position: relative;
+    z-index: 1;
+     text-align:center;
+         font-size: 14px;
+         color: rgb(110, 110, 110);
+         padding-bottom: 30px;
+}
+.fd-banner input {
+    position: relative;
+    z-index: 1;
+    height: 43px;
+    line-height: 43px;
+    width:1140px;
+    padding-left: 40px;
+    font-size: 30px;
+}
+/************* 卡片区域 ***************/
+.fd-card{}
+.fd-card h3{
+  text-align: center;
+      font-size: 30px;
+      letter-spacing: 4px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+}
+.fd-card p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.fd-card ul{}
+.fd-card ul li{
+  float: left;
+}
+.fd-card ul li div{
+  border: 1px solid #dedede;
+    width: 270px;
+    height: 340px;
+    margin-right:6px;
+    margin-bottom: 15px; 
+}
+.fd-card ul li div img{
+  width: 270px;
+}
+.fd-card ul li div h4{
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #dedede;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.fd-card ul li div label{
+  font-weight: 600;
+  padding-left: 20px;
+  float: left;
+}
+.fd-card ul li div label+span{
+  float: left;
+}
+.fd-card ul li div span{
+  float: right;
+  padding-right: 20px;
+}
+/************* 链接区域 ***************/
+.fd-links{
+  height: 520px;
+  background: #F3F3F3 url(../img/bg-links.png) no-repeat left top;
+  position: relative;
+}
+.fd-links>div{
+  height: 100%;
+}
+.fd-links > div >a{
+  display: block;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  line-height: 200px;
+  background-color:#ffffff; 
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+  margin: auto;
+}
+.fd-links .fd-links-box {
+  float: right;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: 40px;
+}
+.fd-links .fd-links-box a{
+  display: block;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  background-color: #ffffff;
+  position: absolute;
+}
+.fd-links .fd-links-box .fd-link-1{
+  left: 0;
+  top:0;
+}
+.fd-links .fd-links-box .fd-link-2{
+  right: 0;
+  top:0;
+}
+.fd-links .fd-links-box .fd-link-3{
+  left:0;
+  bottom: 0;
+}
+.fd-links .fd-links-box .fd-link-4{
+  right: 0;
+  bottom: 0;
+}
+/************* 信息区域 ***************/
+.fd-info{
+  height: 850px;
+}
+.fd-info h4 {
+  font-size: 40px;
+  padding-top: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.fd-info ul.fd-ul-1 {}
+.fd-info ul.fd-ul-1 li {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+  text-align: center;
+}
+.fd-info ul.fd-ul-1 li p {
+  background-color: #F5F5F5;
+  padding: 10px;
+  padding-bottom: 40px;
+  border: 1px solid #dedede;
+  text-align: left;
+}
+.fd-info ul.fd-ul-1 li img {
+  position: relative;
+  top:-30px;
+}
+.fd-info ul.fd-ul-1 li p span {}
+.fd-info ul.fd-ul-1 li p span b {
+  font-weight: 600;
+}
+.fd-info ul.fd-ul-2 li {
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+  text-align: center;
+}
+.fd-info ul.fd-ul-2 h6{
+  font-size: 34px;
+  font-weight: 600;
+  padding: 40px 0;
+}
+.fd-info ul.fd-ul-2 p {
+  border-left: 2px solid #FDC601;
+  border-right: 2px solid #FDC601;
+  width: 60%;
+  margin: 0 auto;
+}
+/************* 价格区域 ***************/
+.fd-price{
+  height: 388px;
+  background-color: #F3F3F3;
+  padding-top: 50px;
+}
+.fd-price >div>div{
+  box-sizing: border-box;
+  float: left;
+  width: 45%;
+  height: 200px;
+  padding: 40px;
+  padding-left:130px;
+  padding-right: 80px;
+  position: relative;
+  margin-right: 5%;
+  color: #fff;
+  background: #E1E1E1 url(../img/icon-search.png) no-repeat 40px center;
+}
+.fd-price >div>div h6{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.fd-price >div >div p{
+}
+.fd-price >div >p{
+    padding-top: 300px;
+    text-align: center;
+}
+.fd-price>div>p>b {
+  font-weight: 600;
+}
+.fd-price >div>div a{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background: #828282 url(../img/icon-facebook.png) no-repeat center;
+}
+/************* 站点地图 ***************/
+.fd-map{
+  background: url(../img/bg-footer.jpg) repeat-x;
+  position: relative;
+  height: 460px;
+}
+.fd-map .fd-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(208, 208, 208, 0.8);
+}
+.fd-map .fd-content-box {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}
+.fd-map dl{
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+}
+.fd-map dl dt{
+  border-bottom: 2px solid #333;
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+}
+.fd-map dl dt span{
+  display: block;
+  width: 140px;
+  border-bottom: 2px solid #FDC601;
+    height: 40px;
+    line-height: 40px;
+}
+.fd-map dl dd{
+    height: 40px;
+    line-height: 40px;
+     font-size: 14px;
+     border-bottom: 1px solid #666;
+}
+/************* 页脚 ***************/
+.fd-footer{
+  background-color: rgb(110, 110, 110,0.6);
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  margin-top: -40px;
+  z-index: 2;
+  position: relative;
+}
+.fd-footer .fd-footer-left{
+  float: left;
+}
+.fd-footer .fd-footer-right{
+  float: right;
+}

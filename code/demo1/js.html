@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Object</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Object</td>
+            <td>Object 构造函数为给定值创建一个对象包装器。如果给定值是 null 或 undefined，将会创建并返回一个空对象，否则，将返回一个与给定值对应类型的对象。
+                当以非构造函数形式被调用时，Object 等同于 new Object()。</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Object.assign()</td>
+            <td>用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。</td>
+            <td>const target = { a: 3, b: 4 };<br>
+                const source = { b: 6, c: 7 };<br>
+                const returnedTarget = Object.assign(target, source);<br>
+                console.log(target);<br>
+                结果：{a: 3, b: 6, c: 7}<br>
+                console.log(returnedTarget);<br>
+                结果：{ a: 3, b: 6, c: 7 }<br>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Object.entries()</td>
+            <td>返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 for...in 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环也枚举原型链中的属性）</td>
+            <td>const obj = { a: '1', b: 2 };<br>
+                console.log(Object.entries(obj)); <br>
+                结果 [ ['a', '1'], ['b', 2] ]<br>
+                const obj = { 0: 'a', 1: 'b', 2: 'c' };<br>
+                console.log(Object.entries(obj)); <br>
+                结果： [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]</td>
+
+        </tr>
+        <tr>
+            <td>Object.freeze()</td>
+            <td>可以冻结一个对象。一个被冻结的对象再也不能被修改；</td>
+            <td>const obj = {<br>
+                prop: a<br>
+                };<br>
+                Object.freeze(obj);<br>
+                obj.prop = b;<br>
+                console.log(obj.prop);<br>
+                结果： a</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Array</h1>
+            </td>
+            <td></td>
+        </tr>
+
+
+        <tr>
+            <td>Array</td>
+            <td>Array 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Array.from()</td>
+            <td>从一个类似数组或可迭代对象中创建一个新的，浅拷贝的数组实例</td>
+            <td>console.log(Array.from('shu'));<br>
+                结果： Array ["s", "h, "u"]<br>
+
+                console.log(Array.from([3, 2, 1], x => x + x));<br>
+                结果：: Array [6, 4, 2]<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Array.isArray() </td>
+            <td>Array.isArray() 用于确定传递的值是否是一个 Array。</td>
+            <td>Array.isArray([a, b, c]); <br>
+                结果：true<br>
+                Array.isArray({shu: 123}); <br>
+                结果：false<br>
+                Array.isArray("shu"); <br>
+                结果：false<br>
+                Array.isArray(undefined); <br>
+                结果： false<br></td>
+        </tr>
+        <tr>
+            <td>Array.of() </td>
+            <td>创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。Array.of() 和 Array 构造函数之间的区别在于处理整数参数：Array.of(7) 创建一个具有单个元素 7 的数组，而
+                Array(7) 创建一个长度为7的空数组</td>
+            <td>Array.of(3); 结果： [3] <br>
+                Array.of(1, 2, 3); 结果： [1, 2, 3] <br>
+                Array(3); 结果： [ , , ]<br>
+                Array(1, 2, 3); 结果：[1, 2, 3]<br></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Date</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Date</td>
+            <td>创建一个 JavaScript Date 实例，该实例呈现时间中的某个时刻。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Date.now() </td>
+            <td>返回自1970年1月1日 00:00:00 UTC到当前时间的毫秒数。</td>
+            <td>var start = Date.now();<br>
+                setTimeout(function() {<br>
+                var millis = Date.now() - start;<br>
+
+                console.log(Math.floor(millis/1000));<br>
+                结果： 3<br>
+                }, 2000);
+            </td>
+        </tr>
+        <tr>
+            <td>setTime() </td>
+            <td>setTime() 方法以毫秒设置 Date 对象。</td>
+            <td>var d = new Date()<br>
+                d.setTime(77771564221)<br>
+                document.write(d)<br>
+                结果：Mon Jun 19 1972 11:12:44 GMT+0800 <br></td>
+        </tr>
+        <tr>
+            <td>toString() </td>
+            <td>toString() 方法可把 Date 对象转换为字符串，并返回结果。</td>
+            <td>var d = new Date()<br>
+                document.write (d.toString())<br>
+                结果： Sun Aug 04 2019 20:43:34 GMT+0800<br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">RegExp</h1>
+            </td>
+            <td></td>
+        </tr>
+
+
+        <tr>
+            <td>RegExp</td>
+            <td>RegExp 构造函数创建了一个正则表达式对象，用于将文本与一个模式匹配。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>compile() </td>
+            <td>compile() 方法用于在脚本执行过程中编译正则表达式。<br>
+                compile() 方法也可用于改变和重新编译正则表达式。</td>
+            <td>var str="Every man in the world! Every woman on earth!";<br>
+                patt=/man/g;<br>
+                str2=str.replace(patt,"person");<br>
+                document.write(str2);<br>
+                结果： Every person in the world! Every woperson on earth!<br></td>
+        </tr>
+        <tr>
+            <td>exec()</td>
+            <td>exec() 方法用于检索字符串中的正则表达式的匹配。</td>
+            <td>var str = "Visit W3School"; <br>
+                var patt = new RegExp("W3School","g");<br>
+                var result;<br>
+
+                while ((result = patt.exec(str)) != null) {<br>
+                document.write(result);<br>
+                document.write("<br />");<br>
+                document.write(patt.lastIndex);<br>
+                }<br>
+                W3School<br>
+                14</td>
+        </tr>
+        <tr>
+            <td>test() </td>
+            <td>test() 方法用于检测一个字符串是否匹配某个模式.</td>
+            <td>var str = "Visit W3School";<br>
+                var patt1 = new RegExp("W3School");<br>
+
+                var result = patt1.test(str);<br>
+
+                document.write(result);<br>
+                结果：true<br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Boolean</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Boolean</td>
+            <td>Boolean 对象表示两个值："true" 或 "false"</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>toSource() </td>
+            <td> 方法返回表示对象源代码的字符串。</td>
+            <td>function employee(name,job,born)<br>
+                {<br>
+                this.name=name;<br>
+                this.job=job;<br>
+                }<br>
+
+                var bill=new employee("Bill Gates","Engineer");<br>
+
+                document.write(bill.toSource());<br>
+                结果： ({name:"Bill Gates", job:"Engineer"}) <br> </td>
+        </tr>
+        <tr>
+            <td>toString() </td>
+            <td>方法可把一个逻辑值转换为字符串，并返回结果。</td>
+            <td> var boo = new Boolean(true)<br>
+                document.write(boo.toString())<br>
+                结果：true<br>
+            </td>
+        </tr>
+        <tr>
+            <td>valueOf() </td>
+            <td>valueOf() 方法可返回 Boolean 对象的原始值。</td>
+            <td>var boo = new Boolean(false)<br>
+                document.write(boo.valueOf())<br>
+                结果： false<br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Number</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Number</td>
+            <td>Number 对象主要用于：
+
+                如果参数无法被转换为数字，则返回 NaN。
+                在非构造器上下文中 (如：没有 new 操作符)，Number 能被用来执行类型转换。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>toFixed() </td>
+            <td>toFixed() 方法可把 Number 四舍五入为指定小数位数的数字。</td>
+            <td>var num = new Number(13.37);<br>
+                document.write (num.toFixed(1))<br>
+                13.4<br></td>
+        </tr>
+        <tr>
+            <td>toExponential()</td>
+            <td>toExponential() 方法可把对象的值转换成指数计数法。</td>
+            <td>var num = new Number(10000);<br>
+                document.write (num.toExponential(1))<br>
+                1.0e+4</td>
+        </tr>
+        <tr>
+            <td>toPrecision()() </td>
+            <td>toPrecision() 方法可在对象的值超出指定位数时将其转换为指数计数法。</td>
+            <td>var num = new Number(10000);<br>
+                document.write (num.toPrecision(4))<br>
+                1.000e+4</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">String</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>String </td>
+            <td>全局对象是一个用于字符串或一个字符序列的构造函数。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>search()</td>
+            <td>功能：用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。<br>
+                参数：regexp/substr，必须，规定子字符串或要匹配的 RegExp 对象。<br>
+                返回值：原字符串中第一次匹配到目标字符串的起始位置。<br></td>
+            <td>var s = 'hello world hello';<br>
+                console.log(s.search('hello')); 结果：//0<br>
+                console.log(s.search(/hello/g)); 结果：//0<br>
+                console.log(s.search(/hello2/)); 结果：-1<br></td>
+        </tr>
+        <tr>
+            <td>toLowerCase() & toUpperCase()</td>
+            <td>功能：把字符串转换为小写/大写。<br>
+                返回值：一个新的字符串。<br></td>
+            <td>var s = 'shu guo';<br>
+                console.log(s.toLowerCase()); //shu guo<br>
+                console.log(s.toUpperCase()); //SHU GUO<br></td>
+        </tr>
+        <tr>
+            <td>concat()</td>
+            <td>功能：用于连接两个或多个字符串。<br>
+                语法：stringObject.concat(stringX,stringX,...,stringX)<br>
+                参数：<br>
+                返回值：衔接后的一个新字符串。<br></td>
+            <td>var s1 = 'hello ';<br>
+                var s2 = 'world ';<br>
+                var s3 = '123';<br>
+                console.log(s1.concat(s2,s3)); 结果：hello world 123</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Math</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Math</td>
+            <td>Math 是一个内置对象， 它具有数学常数和函数的属性和方法。不是一个函数对象。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>min() </td>
+            <td>min() 方法可返回指定的数字中带有最低值的数字。 </td>
+            <td>
+                document.write(Math.min(5,7) ) 5<br>
+                document.write(Math.min(-3,5) ) -3<br>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>random() 方法可返回介于 0 ~ 1 之间的一个随机数。</td>
+            <td>document.write(Math.random())<br>
+                结果： 0.0664669563108135<br>
+            </td>
+        </tr>
+        <tr>
+            <td>sqrt() </td>
+            <td>sqrt() 方法可返回一个数的平方根。</td>
+            <td>var a=Math.sqrt(0); 0<br>
+                var b=Math.sqrt(1); 1<br>
+                var c=Math.sqrt(9); 3 <br>
+                var d=Math.sqrt(0.64); 0.8 <br>
+                var e=Math.sqrt(-9); NaN<br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h1 style="text-align: center">Json</h1>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>JSON </td>
+            <td>是一种语法，用来序列化对象、数组、数值、字符串、布尔值和 null 。它基于 JavaScript 语法，但与之不同：JavaScript不是JSON，JSON也不是JavaScript。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>JSON.parse()</td>
+            <td>功能：将字符串反序列化成对象<br>
+                参数：JSON字符串<br>
+                返回值：对象<br></td>
+            <td>var jsonString = '{"name":"ryan"}'; //JSON字符串（比如从AJAX获取字符串信息）<br>
+                var obj = JSON.parse(jsonString); //将字符串反序列化成对象<br>
+                console.log(obj); 结果：{ name: 'ryan' }<br>
+                console.log(obj.name == 'ryan');结果：true<br></td>
+        </tr>
+        <tr>
+            <td>JSON.stringify()</td>
+            <td>功能：将一个对象解析为JSON字符串<br>
+                参数：对象<br>
+                返回值：JSON字符串<br></td>
+            <td>var obj = {name:'ryan',age:23};<br>
+                var jsonString = JSON.stringify(obj);<br>
+                console.log(jsonString);结果：'{"name":"ryan","age":23}'<br></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

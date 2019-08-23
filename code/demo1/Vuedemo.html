@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="/vuedemo.js"></script>
+
+</head>
+<style>
+    .class1 {
+        background: #444;
+        color: #eee;
+    }
+</style>
+
+<body>
+    <div id="app">
+
+        <input type="checkbox" v-model="use">r
+        <br>
+        <div v-bind:class="{'class1' : use}">
+            ni hao a
+        </div>
+        {{use}}
+        <input type="text" v-model="use">
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                use: false
+            }
+        })</script>
+    <div id="components-demo">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+    <script>
+        Vue.component('button-counter', {
+            data: function () {
+                return {
+                    count: 0
+                }
+            },
+            template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+        })
+        new Vue({ el: '#components-demo' })</script>
+    <!-- <div id="app">
+        {{5+5}}<br>
+        {{ ok ? 'YES' : 'NO' }}<br>
+        {{ message.split('').reverse().join('') }}
+        <div v-bind:id="'list-'+id">菜鸟</div>
+    </div>
+    <script>
+     new Vue({
+         el:'#app',
+         data:{
+             ok:true,
+             message : "shu",
+             id :1
+         }
+     })
+     
+    </script> -->
+    <!-- <div id="vue_det">
+    <h1>site : {{site}}</h1>
+    <h1>url : {{url}}</h1>
+    <h1> {{details()}}</h1>
+   </div>
+   <script>
+  var vm = new Vue({
+      el :'#vue_det',
+      data : {
+          site : "菜鸟",
+          url : "www,baidu.com",
+          alexa : "10000"
+      },
+      methods: {
+          details : function(){
+              return this.site +"舒同学";
+          }
+      }
+  })  </script>-->
+
+
+    <!-- <div id="app">
+        <ol >
+            <li v-for="site in sites">
+                {{ site.name}}
+            </li>
+        </ol>
+    </div>
+    <script>
+    new Vue ({
+    el :'#app',
+    data : {
+        sites:[
+            { name: 'a' },
+            { name: 'b' },
+            { name: 'c' }
+        ]
+    }
+})</script> -->
+
+
+</body>
+
+</html>
